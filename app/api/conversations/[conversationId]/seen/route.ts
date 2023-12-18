@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import { pusherServer } from '@/app/libs/pusher'
 import prisma from "@/app/libs/prismadb";
-
+// 定义params接口
 interface IParams {
   conversationId?: string;
 }

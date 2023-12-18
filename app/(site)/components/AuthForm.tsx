@@ -15,11 +15,12 @@ import { toast } from "react-hot-toast";
 type Variant = 'LOGIN' | 'REGISTER';
 
 const AuthForm = () => {
+  //AuthConext提供的所以，这个声明的作用是创建一个可以在应用的任何位置访问和操作用户会话的上下文。
   const session = useSession();
   const router = useRouter();
   const [variant, setVariant] = useState<Variant>('LOGIN');
   const [isLoading, setIsLoading] = useState(false);
-
+// useEffect 钩子接受两个参数：一个函数和一个依赖数组。当依赖数组中的任何值发生变化时，就会执行这个函数。
   useEffect(() => {
     if (session?.status === 'authenticated') {
       router.push('/conversations')
@@ -34,7 +35,7 @@ const AuthForm = () => {
     }
   }, [variant]);
 
-  const {
+ const {
     register,
     handleSubmit,
     formState: {

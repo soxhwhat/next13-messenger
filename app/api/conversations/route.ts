@@ -31,6 +31,8 @@ export async function POST(
           name,
           isGroup,
           users: {
+            //      connect: [{ id: 8 }, { id: 9 }, { id: 10 }]
+            //如果 members 数组是 [{ value: '1' }, { value: '2' }]，那么返回结果就是 [{ id: '1' }, { id: '2' }]。
             connect: [
               ...members.map((member: { value: string }) => ({  
                 id: member.value 
@@ -56,6 +58,7 @@ export async function POST(
       return NextResponse.json(newConversation);
     }
 
+    // 这段代码的意思是，查询数据库中 userIds 等于 [currentUser.id, userId] 或 userIds 等于 [userId, currentUser.id] 的对话。
     const existingConversations = await prisma.conversation.findMany({
       where: {
         OR: [

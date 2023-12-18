@@ -12,8 +12,10 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   return (
+    // 这个组件用于实现模态对话框的打开和关闭的动画
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={onClose}>
+      {/* 这个组件用于实现模态对话框的打开和关闭的动画 */}
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"

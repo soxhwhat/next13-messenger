@@ -10,8 +10,9 @@ interface AvatarGroupProps {
 const AvatarGroup: React.FC<AvatarGroupProps> = ({ 
   users = [] 
 }) => {
+  // 首先使用users属性的值或者一个空数组来初始化一个名为users的变量
   const slicedUsers = users.slice(0, 3);
-  
+  // 然后，定义了一个名为positionMap的对象，这个对象定义了每个头像的位置。这个对象的键是头像的索引，值是头像的位置。
   const positionMap = {
     0: 'top-0 left-[12px]',
     1: 'bottom-0',

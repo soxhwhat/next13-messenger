@@ -3,6 +3,7 @@ import clsx from "clsx";
 interface ButtonProps {
   type?: "button" | "submit" | "reset" | undefined;
   fullWidth?: boolean;
+  // 在 React 中，children 是一个特殊的属性，它用于表示组件的子元素。你可以在组件的开标签和闭标签之间放置子元素，然后在组件内部通过 props.children 访问这些子元素。
   children?: React.ReactNode;
   onClick?: () => void;
   secondary?: boolean;

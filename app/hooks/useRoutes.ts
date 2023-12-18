@@ -8,7 +8,12 @@ import useConversation from "./useConversation";
 const useRoutes = () => {
   const pathname = usePathname();
   const { conversationId } = useConversation();
-
+  //useMemo 钩子用于记住 routes 数组，只有当 pathname 或 conversationId 发生变化时才重新计算。
+  /**
+   * 第一个对象代表 "Chat" 路由，当 pathname 等于 '/conversations' 或 conversationId 存在时，这个路由是激活状态。
+   * 第二个对象代表 "Users" 路由，当 pathname 等于 '/users' 时，这个路由是激活状态。
+   * 第三个对象代表 "Logout" 路由，点击这个路由会调用 signOut 函数进行登出操作
+   */
   const routes = useMemo(() => [
     { 
       label: 'Chat', 

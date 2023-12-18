@@ -1,7 +1,7 @@
 'use client';
 
 import ReactSelect from 'react-select'
-
+// 总的来说，Select组件是一个封装了react-select库的下拉选择框，它接受一些属性，如标签、当前值、改变事件处理函数、选项和禁用状态，并根据这些属性渲染一个下拉选择框
 interface SelectProps {
   label: string;
   value?: Record<string, any>;

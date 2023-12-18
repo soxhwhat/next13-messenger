@@ -3,7 +3,7 @@
 import React, { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { ClipLoader } from 'react-spinners';
-
+// 总的来说，LoadingModal组件是一个加载模态窗口，它始终显示，包含一个半透明的背景和一个旋转的加载图标。
 const LoadingModal = () => {
   return (
     <Transition.Root show as={Fragment}>

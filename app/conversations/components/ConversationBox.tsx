@@ -24,7 +24,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
   const otherUser = useOtherUser(data);
   const session = useSession();
   const router = useRouter();
-
+  // 在 React 中，useCallback Hook 用于记忆函数，防止在每次组件重新渲染时都创建新的函数。如果你的函数作为依赖项传递给其他的 Hooks（例如 useEffect），或者作为 props 传递给子组件，那么使用 useCallback 可以提高性能。
   const handleClick = useCallback(() => {
     router.push(`/conversations/${data.id}`);
   }, [data, router]);
@@ -104,7 +104,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
                 "
               >
                 {format(new Date(lastMessage.createdAt), 'p')}
-              </p>
+               </p>
             )}
           </div>
           <p 

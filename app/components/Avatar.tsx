@@ -25,12 +25,14 @@ const Avatar: React.FC<AvatarProps> = ({ user }) => {
         md:h-11 
         md:w-11
       ">
+        {/* fill：这是一个布尔属性，如果存在，表示图片应该填充其包含元素。 */}
         <Image
           fill
           src={user?.image || '/images/placeholder.jpg'}
           alt="Avatar"
         />
       </div>
+      {/* 所以，这段代码的意思是，定义了一个绝对定位的块级元素，它的形状是一个完全圆形，背景颜色为绿色，有一个白色的轮廓，位置在右上角，大小根据屏幕大小变化。这通常用于显示一个在线状态指示器 */}
       {isActive ? (
         <span 
           className="

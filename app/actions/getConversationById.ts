@@ -10,7 +10,7 @@ const getConversationById = async (
     if (!currentUser?.email) {
       return null;
     }
-  
+    // 表示在获取对话的同时获取对话的用户。
     const conversation = await prisma.conversation.findUnique({
       where: {
         id: conversationId

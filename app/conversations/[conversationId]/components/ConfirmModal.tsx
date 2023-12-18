@@ -55,6 +55,7 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
             sm:w-10
           "
         >
+          {/* 这段代码定义了一个红色的警告三角形图标 */}
           <FiAlertTriangle 
             className="h-6 w-6 text-red-600" 
             aria-hidden="true"

@@ -15,6 +15,7 @@ import Select from '../inputs/Select';
 import Modal from './Modal';
 import Button from '../Button';
 import { toast } from 'react-hot-toast';
+// 创建群聊模态框组件
 
 interface GroupChatModalProps {
   isOpen?: boolean;
@@ -96,6 +97,7 @@ const GroupChatModal: React.FC<GroupChatModalProps> = ({
                   value: user.id, 
                   label: user.name 
                 }))} 
+                // 当下拉选择框的值改变时，这个函数会更新表单中members字段的值，并立即验证这个字段。
                 onChange={(value) => setValue('members', value, { 
                   shouldValidate: true 
                 })} 

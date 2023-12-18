@@ -60,5 +60,5 @@ export const authOptions: AuthOptions = {
 }
 
 const handler = NextAuth(authOptions);
-
+// 该处理程序将处理任何get或post请求
 export { handler as GET, handler as POST };

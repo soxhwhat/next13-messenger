@@ -1,5 +1,5 @@
 'use client';
-
+// HiPaperAirplane 和 HiPhoto 是两个图标组件，分别表示纸飞机和照片的图标。这些图标组件可以直接在 JSX 中使用，就像其他的 React 组件一样。
 import { 
   HiPaperAirplane, 
   HiPhoto
@@ -59,17 +59,18 @@ const Form = () => {
         w-full
       "
     >
+      {/* CldUploadButton 组件是一个云端上传按钮，它可以让我们上传图片到云端。这个组件接受一个 options 属性，用来配置上传按钮的行为。我们可以通过这个属性来限制上传的文件数量。这里我们设置 maxFiles 为 1，表示只能上传一张图片。 */}
       <CldUploadButton 
         options={{ maxFiles: 1 }} 
         onUpload={handleUpload} 
-        uploadPreset="pgc9ehd5"
+        uploadPreset="dcim7pgy"
       >
         <HiPhoto size={30} className="text-sky-500" />
       </CldUploadButton>
       <form 
         onSubmit={handleSubmit(onSubmit)} 
         className="flex items-center gap-2 lg:gap-4 w-full"
-      >
+      > 
         <MessageInput 
           id="message" 
           register={register} 

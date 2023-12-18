@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import prisma from "@/app/libs/prismadb";
-
+// 这个POST函数用于处理用户信息更新的HTTP POST请求。当接收到请求时，它会更新当前用户的图片和名字，然后返回更新后的用户信息。
 export async function POST(
   request: Request,
 ) {

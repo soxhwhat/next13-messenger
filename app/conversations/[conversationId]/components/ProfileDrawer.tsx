@@ -13,6 +13,7 @@ import Avatar from '@/app/components/Avatar';
 import AvatarGroup from '@/app/components/AvatarGroup';
 import ConfirmModal from './ConfirmModal';
 
+// 总的来说，ProfileDrawer组件用于显示一个用户或群组的详细信息，这个组件可以打开和关闭，关闭时会有一个动画效果。在这个组件中，可以看到用户或群组的头像、标题、状态和详细信息，还可以删除用户或群组。
 interface ProfileDrawerProps {
   isOpen: boolean;
   onClose: () => void;
@@ -54,6 +55,9 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
         isOpen={confirmOpen} 
         onClose={() => setConfirmOpen(false)}
       />
+      {/* 首先，使用了Transition.Root组件，这个组件用于实现抽屉的打开和关闭的动画。
+      然后，定义了一个Dialog组件，这个组件用于显示抽屉的内容。
+      在Dialog组件中，定义了一个Transition.Child组件，这个组件用于实现模态框的淡入淡出效果。 */}
       <Transition.Root show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-50" onClose={onClose}>
           <Transition.Child

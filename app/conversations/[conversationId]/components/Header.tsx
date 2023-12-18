@@ -21,9 +21,11 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ conversation }) => {
   const otherUser = useOtherUser(conversation);
+  // drawerOpen 状态表示抽屉是否打开。 
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const { members } = useActiveList();
+  // 这段代码是在检查 otherUser?.email 是否在 members 数组中。
   const isActive = members.indexOf(otherUser?.email!) !== -1;
   const statusText = useMemo(() => {
     if (conversation.isGroup) {

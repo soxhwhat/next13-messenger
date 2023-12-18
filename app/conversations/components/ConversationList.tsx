@@ -84,6 +84,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)}
       />
+      {/* <aside> 元素是侧边栏的容器。这可能是用于控制侧边栏的显示和隐藏 */}
       <aside className={clsx(`
         fixed 
         inset-y-0 

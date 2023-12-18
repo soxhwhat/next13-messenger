@@ -73,6 +73,7 @@ const MessageBox: React.FC<MessageBoxProps> = ({
             <div>{data.body}</div>
           )}
         </div>
+        {/* 显示已读状态 */}
         {isLast && isOwn && seenList.length > 0 && (
           <div 
             className="

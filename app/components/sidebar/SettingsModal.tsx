@@ -12,7 +12,7 @@ import Modal from '../modals/Modal';
 import Button from '../Button';
 import Image from 'next/image';
 import { toast } from 'react-hot-toast';
-
+// SettingsModal组件是一个用户设置的模态对话框，用户可以在这个对话框中修改他们的名字和图片。
 interface SettingsModalProps {
   isOpen?: boolean;
   onClose: () => void;
@@ -44,6 +44,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
     }
   });
 
+// 总的来说，这段代码创建了一个名为image的变量，这个变量的值是表单中image字段的当前值。当image字段的值改变时，image变量的值也会相应地改变。
   const image = watch('image');
 
   const handleUpload = (result: any) => {
@@ -116,8 +117,9 @@ const SettingsModal: React.FC<SettingsModalProps> = ({
                   <CldUploadButton 
                     options={{ maxFiles: 1 }} 
                     onUpload={handleUpload} 
-                    uploadPreset="pgc9ehd5"
+                    uploadPreset="dcim7pgy"
                   >
+                    {/* 可以通过CldUploadButton定义的组件，点击进行上传 */}
                     <Button
                       disabled={isLoading}
                       secondary

@@ -2,7 +2,7 @@
 
 import Modal from '@/app/components/modals/Modal';
 import Image from 'next/image';
-
+// 这段代码定义了一个名为ImageModal的React组件，这个组件是一个模态窗口，用于显示一张图片。
 interface ImageModalProps {
   isOpen?: boolean;
   onClose: () => void;
